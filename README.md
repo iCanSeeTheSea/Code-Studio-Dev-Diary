@@ -2,7 +2,9 @@
 
 #### yay! coding and stuff
 
-note: github doesnt show the images in the README preview and that makes me sad :(
+note: github doesn't show the images in the README preview and that makes me sad :(
+
+to see the images, I've popped this repo on my [replit](https://replit.com/@iCanSeeTheSea/Code-Studio-Dev-Diary) - just open `README.md` and click the little 'preview' next to the filename along the top.
 
 ---
 
