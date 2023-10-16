@@ -2,6 +2,8 @@
 
 #### yay! coding and stuff
 
+note: github doesnt show the images in the README preview and that makes me sad :(
+
 ---
 
 ## C++ Basics `16/10/2023`
