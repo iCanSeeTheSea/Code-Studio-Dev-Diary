@@ -96,7 +96,7 @@ Taking a break from learning C++, for the Global Game Jam my team ([Dino Beans](
 > 
 > In this diagram, `A` is the catcher, `B` is the thrower, and `C` is the point that the Frisbee should be caught at.
 > ![a diagram of the vectors involved in calculating the point to catch the Frisbee](/assets/i%20hate%20vectors/vectordiagram.png)
-> To calculate the vector to move A along to point C, I knew I needed to calculate the vector of the horizontal range of the projectile
+> To calculate the vector to with which to translate A to point C, I knew I needed to calculate the vector of the horizontal range of the projectile from the distance and direction of the Frisbee's motion.
 > 
 > To calculate range (as a distance, not a vector) I used the equation for the horizontal range of a projectile: $R = \frac{v_{0}^{2}\cdot sin2\alpha}{g}$  
 > where:  
@@ -105,7 +105,18 @@ Taking a break from learning C++, for the Global Game Jam my team ([Dino Beans](
 >  $\alpha$ is the angle of the initial velocity from the horizontal plane (in radians as that's what Unity's trig functions take as parameters)  
 >  $g$ is the acceleration due to gravity (I used `9.8`)
 > 
-> which I implemented as follows:
+> Which I implemented as follows:
 > ![code for the function to calculate horizontal range of a projectile](/assets/i%20hate%20vectors/flightrange.png)
 > 
+> The full function to calculate the initial velocity of the Frisbee and use the `AddForce` function to throw it is as follows:
+> ![function for throwing the frisbee](/assets/i%20hate%20vectors/throwfunction.png)
 > 
+> At first, I wasn't calculating the horizontal and vertical components of the velocity separately (lines 63-66) but just adding both the horizontal and vertical offsets to the same Vector. However, when using that method some maths was wrong, I believe it was to do with where I was normalising vectors before multiplying them by the impulse - so I split the calculations into the horizontal and vertical components, which fixed the problem.
+> 
+> The other major problem I encountered was calculating the vector **R**, in order to work out where to move the catcher to. Initially I was trying to work out the angle between the vector **b** - **a** and **R**, then using that angle and the magnitude of the vector (the horizontal distance travelled by the Frisbee) calculate **R**. After many hours of suffering in vector math hell (and after splitting the initial velocity calculation into its horizontal and vertical components), I realised that I didn't need to calculate another angle at all, as I already had a vector representing the direction that the Frisbee was thrown in, being the horizontal velocity: by normalising the horizontal velocity and multiplying that by the distance, I had the vector **R**.
+>
+> `Vector3 R = Vx.normalized * throwRange;`
+> 
+> Calculating the position vector for the catcher to move to was then as simple as adding **R** to the position vector of the thrower.
+> 
+> ![Video of working Frisbee game](/assets/i%20hate%20vectors/frisbeegame.mp4)
