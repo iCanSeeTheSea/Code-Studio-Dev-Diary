@@ -94,9 +94,9 @@ Taking a break from learning C++, for the Global Game Jam my team ([Dino Beans](
 > 
 > using Unity's inbuilt `Rigidbody.AddForce()` function made it easy to have the Frisbee thrown with a realistic arc. However, the challenge came in giving the Frisbee a random horizontal offset that it could be thrown in, and then having the catcher move to the correct place to catch the Frisbee.
 > 
-> range : $R = v_{0}^{2}sin2\alpha / g$
-> where:
->  $R$ is the horizontal range
->  $v_{0}$ is the initial velocity
->  $\alpha$ is the angle of the initial velocity from the horizontal plane (in radians as that's what Unity's trig functions take as parameters)
+> range : $R = \frac{v_{0}^{2}\cdot sin2\alpha}{g}$  
+> where:  
+>  $R$ is the horizontal range  
+>  $v_{0}$ is the initial velocity  
+>  $\alpha$ is the angle of the initial velocity from the horizontal plane (in radians as that's what Unity's trig functions take as parameters)  
 >  $g$ is the acceleration due to gravity (I used `9.81`)
