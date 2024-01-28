@@ -105,10 +105,10 @@ Taking a break from learning C++, for the Global Game Jam my team ([Dino Beans](
 >  $\alpha$ is the angle of the initial velocity from the horizontal plane (in radians as that's what Unity's trig functions take as parameters)  
 >  $g$ is the acceleration due to gravity (I used `9.8`)
 > 
-> Which I implemented as follows:
+> Which I implemented as follows:  
 > ![code for the function to calculate horizontal range of a projectile](/assets/i%20hate%20vectors/flightrange.png)
 > 
-> The full function to calculate the initial velocity of the Frisbee and use the `AddForce` function to throw it is as follows:
+> The full function to calculate the initial velocity of the Frisbee and use the `AddForce` function to throw it is as follows:  
 > ![function for throwing the frisbee](/assets/i%20hate%20vectors/throwfunction.png)
 > 
 > At first, I wasn't calculating the horizontal and vertical components of the velocity separately (lines 63-66) but just adding both the horizontal and vertical offsets to the same Vector. However, when using that method some maths was wrong, I believe it was to do with where I was normalising vectors before multiplying them by the impulse - so I split the calculations into the horizontal and vertical components, which fixed the problem.
