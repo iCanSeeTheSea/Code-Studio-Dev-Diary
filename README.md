@@ -119,4 +119,5 @@ Taking a break from learning C++, for the Global Game Jam my team ([Dino Beans](
 > 
 > Calculating the position vector for the catcher to move to was then as simple as adding **R** to the position vector of the thrower.
 > 
-> ![Video of working Frisbee game](/assets/i%20hate%20vectors/frisbeegame.mp4)
+> Here is an (extremely compressed) example of the game working.
+> ![Video of working Frisbee game](/assets/i%20hate%20vectors/frisbeegame.gif)
