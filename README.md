@@ -94,9 +94,18 @@ Taking a break from learning C++, for the Global Game Jam my team ([Dino Beans](
 > 
 > using Unity's inbuilt `Rigidbody.AddForce()` function made it easy to have the Frisbee thrown with a realistic arc. However, the challenge came in giving the Frisbee a random horizontal offset that it could be thrown in, and then having the catcher move to the correct place to catch the Frisbee.
 > 
-> range : $R = \frac{v_{0}^{2}\cdot sin2\alpha}{g}$  
+> In this diagram, `A` is the catcher, `B` is the thrower, and `C` is the point that the Frisbee should be caught at.
+> ![a diagram of the vectors involved in calculating the point to catch the Frisbee](/assets/i%20hate%20vectors/vectordiagram.png)
+> To calculate the vector to move A along to point C, I knew I needed to calculate the vector of the horizontal range of the projectile
+> 
+> To calculate range (as a distance, not a vector) I used the equation for the horizontal range of a projectile: $R = \frac{v_{0}^{2}\cdot sin2\alpha}{g}$  
 > where:  
 >  $R$ is the horizontal range  
 >  $v_{0}$ is the initial velocity  
 >  $\alpha$ is the angle of the initial velocity from the horizontal plane (in radians as that's what Unity's trig functions take as parameters)  
->  $g$ is the acceleration due to gravity (I used `9.81`)
+>  $g$ is the acceleration due to gravity (I used `9.8`)
+> 
+> which I implemented as follows:
+> ![code for the function to calculate horizontal range of a projectile](/assets/i%20hate%20vectors/flightrange.png)
+> 
+> 
