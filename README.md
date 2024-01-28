@@ -11,6 +11,7 @@ to see the images, I've popped this repo on my [replit](https://replit.com/@iCan
 
 - [C++ basics](#c++-basics) `16/10/2023`
 - [Classes and Pointers](#Classes-and-Pointers) `21/11/2023`
+- [I Hate Vectors](#I-Hate-Vectors) `28/01/24`
 
 ---
 
@@ -83,3 +84,14 @@ Note 2: a file containing the code at the time of writing this can be found [her
 > The syntax for this is a little complicated, so if I have to use it more than once I will probably use typedefs or type aliasing to simplify it a little.
 > 
 > I also haven't tested this how I want to use it, so I may end up using a different approach.
+
+# I Hate Vectors
+`28/01/24`
+
+Taking a break from learning C++, for the Global Game Jam my team ([Dino Beans](https://globalgamejam.org/games/2024/greg-beach-8)) decided to use Unity create our game. As part of the game, I was tasked with creating a set of NPCs that would be able to play a game of Frisbee with each other.
+
+> #### Chasing Frisbees
+> 
+> using Unity's inbuilt `Rigidbody.AddForce()` function made it easy to have the Frisbee thrown with a realistic arc. However, the challenge came in giving the Frisbee a random horizontal offset that it could be thrown in, and then having the catcher move to the correct place to catch the Frisbee.
+> 
+> range : $R = v_{0}^{2}sin2\alpha / g
