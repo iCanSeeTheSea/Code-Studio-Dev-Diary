@@ -2,16 +2,13 @@
 
 #### yay! coding and stuff
 
-note: github doesn't show the images in the README preview and that makes me sad :(
-
-to see the images, I've popped this repo on my [replit](https://replit.com/@iCanSeeTheSea/Code-Studio-Dev-Diary) - just open `README.md` and click the little 'preview' next to the filename along the top.
-
 ---
 ### Contents
 
 - [C++ basics](#c++-basics) `16/10/2023`
 - [Classes and Pointers](#Classes-and-Pointers) `21/11/2023`
 - [I Hate Vectors](#I-Hate-Vectors) `28/01/24`
+- [A Single Button Game](#A-single-button-game...) `16/02/24`
 
 ---
 
@@ -121,3 +118,17 @@ Taking a break from learning C++, for the Global Game Jam my team ([Dino Beans](
 > 
 > Here is an (extremely compressed) example of the game working.
 > ![Video of working Frisbee game](/assets/i%20hate%20vectors/frisbeegame.gif)
+
+# A Single Button Game...
+`16/02/24`
+
+> #### ... In a single line of code
+> The game is hosted on [my GitHub Pages site](https://icanseethesea.github.io/)
+![single line of code for the button game](/assets/single%20line/button%20game.png)
+> Ok cool that's the code.
+> 
+> But slightly more seriously, I enjoy attempting to create small programs in one line as it forces me to learn new features of a language that I wouldn't have known about otherwise. For example, to set the text content and colour of the button and text I had to set a list of the variables I wanted to change to a list of the values to change them too, i.e. `[varA, varB, varC] = [valueA, valueB, valueC]`. This way, I was able to return multiple values from the anonymous function and set the variables all in one statement.
+> 
+> The only part that I don't fully understand how it works is this: `Object.entries(vars).forEach(v => document.documentElement.style.setProperty(v[0], v[1]))`. I understand that it's taking a dictionary`vars`, then setting the style properties specified by the keys to their respective values. Now I was going to write about how I didn't know where the `Object.entries()` syntax does, but as I was writing it I realised that JS objects and dictionaries are the same thing, and that the function would just be returning a 2D list of the key-value pairs for the foreach function to be called upon.
+> 
+> The other features that made this possible in a single line (obviously without using semicolons as delimiters because that would be cheating) were nested ternary operators and JavaScript's *absolutely wonderful* anonymous function syntax (I hate it so much).
